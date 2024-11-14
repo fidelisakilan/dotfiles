@@ -1,0 +1,19 @@
+import = [ "~/.config/alacritty/themes/catppuccin_mocha.toml" ]
+[env]
+TERM = "xterm-256color"
+
+[cursor]
+unfocused_hollow = true
+
+[font]
+size = 15
+
+[font.normal]
+family = "CaskaydiaCove Nerd Font"
+
+[scrolling]
+history = 4000
+
+[shell]
+program = "/bin/zsh"
+args = ["-l","-c","tmux attach || tmux"]

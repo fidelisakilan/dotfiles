@@ -1,0 +1,3 @@
+[submodule "/Users/fidelisakilan/.dotfiles/nvim/.config/nvim"]
+	path = /Users/fidelisakilan/.dotfiles/nvim/.config/nvim
+	url = https://github.com/fidelisakilan/nvim
