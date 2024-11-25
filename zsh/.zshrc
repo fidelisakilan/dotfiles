@@ -24,16 +24,15 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH":"$HOME/env-scripts"
 export PATH="$PATH":"$HOME/sdk/google-cloud-sdk/bin"
 
-alias vim="nvim"
 
 #shell completions
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 source $ZSH/oh-my-zsh.sh
 
-if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
-  tmux attach || exec tmux new-session && exit;
-fi
+# if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
+#   tmux attach || exec tmux new-session && exit;
+# fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -57,3 +56,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+export PATH=$PATH:/Users/fidelisakilan/.spicetify
