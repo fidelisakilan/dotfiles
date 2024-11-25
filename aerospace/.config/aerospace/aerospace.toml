@@ -13,9 +13,6 @@ default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
 key-mapping.preset = 'qwerty'
 
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-on-focus-changed = "move-mouse window-lazy-center"
-
 [gaps]
 inner.horizontal = 10
 inner.vertical =   10
@@ -103,50 +100,34 @@ alt-shift-l = ['join-with right', 'mode main']
 if.app-id = 'com.apple.Dictionary'
 run = 'layout floating'
 
-# [[on-window-detected]]
-# if.app-id = 'md.obsidian'
-# run = 'move-node-to-workspace backtick'
-#
-# [[on-window-detected]]
-# if.app-id = 'company.thebrowser.Browser'
-# run = 'move-node-to-workspace W'
-#
-# [[on-window-detected]]
-# if.app-id = 'org.mozilla.firefox'
-# run = 'move-node-to-workspace W'
-#
-# [[on-window-detected]]
-# if.app-id = 'com.microsoft.teams2'
-# run = 'move-node-to-workspace C'
-#
-# [[on-window-detected]]
-# if.app-id = 'com.hnc.Discord'
-# run = 'move-node-to-workspace C'
-#
-# [[on-window-detected]]
-# if.app-id = 'net.whatsapp.WhatsApp'
-# run = 'move-node-to-workspace C'
-#
-# [[on-window-detected]]
-# if.app-id = 'com.google.android.studio'
-# run = 'move-node-to-workspace I'
-#
-# [[on-window-detected]]
-# if.app-id = 'com.jetbrains.intellij'
-# run = 'move-node-to-workspace I'
-#
-# [[on-window-detected]]
-# if.app-id = 'com.microsoft.VSCode'
-# run = 'move-node-to-workspace I'
-#
-# [[on-window-detected]]
-# if.app-id = 'com.spotify.client'
-# run = 'move-node-to-workspace 10'
-#
-# [[on-window-detected]]
-# if.app-id = 'net.kovidgoyal.kitty'
-# run = 'move-node-to-workspace T'
-#
-# [[on-window-detected]]
-# if.app-id = 'com.apple.finder'
-# run = 'move-node-to-workspace F'
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace I'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace 10'
+
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = 'move-node-to-workspace 2'
