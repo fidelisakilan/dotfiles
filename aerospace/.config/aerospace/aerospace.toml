@@ -14,12 +14,12 @@ default-root-container-orientation = 'auto'
 key-mapping.preset = 'qwerty'
 
 [gaps]
-inner.horizontal = 10
-inner.vertical =   10
-outer.left =       10
-outer.bottom =     10
-outer.top =        10
-outer.right =      10
+inner.horizontal = 5  
+inner.vertical =   5  
+outer.left =       5  
+outer.bottom =     5  
+outer.top =        5  
+outer.right =      5  
 
 [mode.main.binding]
 cmd-h = [] # Disable "hide application"
@@ -54,11 +54,12 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
+# alt-b = 'workspace B'
 # alt-c = 'workspace C'
-# alt-w = 'workspace W'
 # alt-i = 'workspace I'
+# alt-m = 'workspace M'
+# alt-n = 'workspace N'
 # alt-t = 'workspace T'
-# alt-backtick = 'workspace backtick'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -71,11 +72,12 @@ alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-0 = 'move-node-to-workspace 10'
+# alt-shift-b = 'move-node-to-workspace B'
 # alt-shift-c = 'move-node-to-workspace C'
-# alt-shift-w = 'move-node-to-workspace W'
 # alt-shift-i = 'move-node-to-workspace I'
+# alt-shift-m = 'move-node-to-workspace M'
+# alt-shift-n = 'move-node-to-workspace N'
 # alt-shift-t = 'move-node-to-workspace T'
-# alt-shift-backtick = 'move-node-to-workspace backtick'
 
 alt-f = 'fullscreen'
 alt-shift-f = 'macos-native-fullscreen'
@@ -99,35 +101,35 @@ alt-shift-l = ['join-with right', 'mode main']
 [[on-window-detected]]
 if.app-id = 'com.apple.Dictionary'
 run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace 8'
-
-[[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
-run = 'move-node-to-workspace 1'
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = 'move-node-to-workspace 9'
-
-[[on-window-detected]]
-if.app-id = 'com.hnc.Discord'
-run = 'move-node-to-workspace 9'
-
-[[on-window-detected]]
-if.app-id = 'net.whatsapp.WhatsApp'
-run = 'move-node-to-workspace 9'
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace I'
-
-[[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace 10'
-
-[[on-window-detected]]
-if.app-id = 'net.kovidgoyal.kitty'
-run = 'move-node-to-workspace 2'
+#
+# [[on-window-detected]]
+# if.app-id = 'md.obsidian'
+# run = 'move-node-to-workspace N'
+#
+# [[on-window-detected]]
+# if.app-id = 'company.thebrowser.Browser'
+# run = 'move-node-to-workspace B'
+#
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.teams2'
+# run = 'move-node-to-workspace C'
+#
+# [[on-window-detected]]
+# if.app-id = 'com.hnc.Discord'
+# run = 'move-node-to-workspace C'
+#
+# [[on-window-detected]]
+# if.app-id = 'net.whatsapp.WhatsApp'
+# run = 'move-node-to-workspace C'
+#
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.VSCode'
+# run = 'move-node-to-workspace I'
+#
+# [[on-window-detected]]
+# if.app-id = 'com.spotify.client'
+# run = 'move-node-to-workspace M'
+#
+# [[on-window-detected]]
+# if.app-id = 'net.kovidgoyal.kitty'
+# run = 'move-node-to-workspace T'

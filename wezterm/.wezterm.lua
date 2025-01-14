@@ -15,20 +15,25 @@ local function scheme_for_appearance(appearance)
     return 'Catppuccin Latte'
   end
 end
-local color_scheme = scheme_for_appearance(get_appearance())
 
 config.native_macos_fullscreen_mode = true
-config.color_scheme = color_scheme
-config.font = wezterm.font('CaskaydiaCove Nerd Font')
-config.font_size = 14
+-- config.window_decorations = "RESIZE"
+config.color_scheme = scheme_for_appearance(get_appearance())
+config.font = wezterm.font('JetBrainsMono Nerd Font')
+config.font_size = 15
 config.use_fancy_tab_bar = false
 
 config.window_padding = {
-    bottom = 0,
-    top = 0,
-    right = 0,
-    left = 0,
+  bottom = 0,
+  top = 0,
+  right = 0,
+  left = 0,
 }
-
-config.window_decorations = 'RESIZE'
+config.keys = {
+  {
+    key = 'f',
+    mods = 'CTRL|SUPER',
+    action = wezterm.action.ToggleFullScreen,
+  },
+}
 return config
