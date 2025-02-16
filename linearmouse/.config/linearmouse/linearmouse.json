@@ -1,11 +1,11 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "scrolling" : {
+        "acceleration" : 1,
         "distance" : {
-          "horizontal" : "56.6px",
-          "vertical" : 3
+          "vertical" : 5,
+          "horizontal" : "56.6px"
         },
         "reverse" : {
           "vertical" : true
@@ -13,11 +13,11 @@
         "speed" : 0,
         "modifiers" : {
           "vertical" : {
-            "shift" : {
-              "type" : "auto"
-            },
             "option" : {
               "type" : "preventDefault"
+            },
+            "shift" : {
+              "type" : "auto"
             },
             "control" : {
               "type" : "preventDefault"
@@ -26,48 +26,47 @@
               "type" : "auto"
             }
           }
-        },
-        "acceleration" : 1
-      },
-      "pointer" : {
-        "acceleration" : 0.6875,
-        "speed" : 0.0689655172413792768,
-        "disableAcceleration" : true
+        }
       },
       "buttons" : {
         "universalBackForward" : true
       },
+      "pointer" : {
+        "disableAcceleration" : true,
+        "acceleration" : 0.6875,
+        "speed" : 0.0689655172413792768
+      },
       "if" : {
         "device" : {
+          "productName" : "USB Receiver",
           "vendorID" : "0x46d",
           "productID" : "0xc53f",
-          "category" : "mouse",
-          "productName" : "USB Receiver"
+          "category" : "mouse"
         }
       }
     },
     {
       "if" : {
         "device" : {
-          "category" : "mouse",
           "serialNumber" : "A23BA1D7",
-          "productName" : "Pebble M350s",
+          "vendorID" : "0x46d",
+          "category" : "mouse",
           "productID" : "0xb036",
-          "vendorID" : "0x46d"
+          "productName" : "Pebble M350s"
         }
       },
       "scrolling" : {
+        "distance" : {
+          "vertical" : "56.1px"
+        },
         "reverse" : {
           "vertical" : true
-        },
-        "speed" : {
-          "vertical" : 0
         },
         "acceleration" : {
           "vertical" : 1
         },
-        "distance" : {
-          "vertical" : "56.1px"
+        "speed" : {
+          "vertical" : 0
         }
       },
       "pointer" : {
@@ -76,5 +75,6 @@
         "disableAcceleration" : true
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }

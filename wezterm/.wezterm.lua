@@ -17,11 +17,11 @@ local function scheme_for_appearance(appearance)
 end
 
 config.native_macos_fullscreen_mode = true
--- config.window_decorations = "RESIZE"
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.font = wezterm.font('JetBrainsMono Nerd Font')
 config.font_size = 15
 config.use_fancy_tab_bar = false
+config.tab_bar_at_bottom = true
 
 config.window_padding = {
   bottom = 0,
