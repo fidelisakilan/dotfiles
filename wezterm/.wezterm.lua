@@ -19,7 +19,7 @@ end
 config.native_macos_fullscreen_mode = true
 config.color_scheme = scheme_for_appearance(get_appearance())
 config.font = wezterm.font('JetBrainsMono Nerd Font')
-config.font_size = 15
+config.font_size = 10
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 

@@ -1,1 +1,2 @@
-theme = dark:catppuccin-mocha,light:catppuccin-latte
+theme = dark:catppuccin-mocha,light:catppuccin-mocha
+command = ~/scripts/tmux.sh
