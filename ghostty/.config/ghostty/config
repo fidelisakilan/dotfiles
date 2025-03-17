@@ -1,2 +1,6 @@
-theme = dark:catppuccin-mocha,light:catppuccin-mocha
-command = ~/scripts/tmux.sh
+command = ~/.config/ghostty/tmux.sh
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+font-size = 10
+font-family = JetBrainsMono Nerd Font
+font-feature = -calt
+confirm-close-surface = false
