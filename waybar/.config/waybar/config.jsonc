@@ -3,16 +3,15 @@
     "height": 24,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["network","pulseaudio", "cpu", "memory"],
-
+    "modules-right": ["network", "cpu", "custom/gpu", "memory", "pulseaudio"],
     "clock": {
         "format": "{:%H:%M | %Y-%m-%d}"
     },
     "cpu": {
-        "format": "CPU: {usage}%"
+        "format": "CPU: {usage:>2}%"
     },
     "memory": {
-        "format": "MEM: {}%"
+        "format": "MEM: {:>2}%"
     },
     "network": {
         "format-wifi": "NET: {essid} {signalStrength}%",
@@ -20,9 +19,17 @@
         "format-disconnected": "NET: Down"
     },
     "pulseaudio": {
-        "format": "VOL: {volume}%",
+        "format": "VOL: {volume:>2}%",
         "format-muted": "VOL: Muted",
         "on-click": "pavucontrol"
+    },
+    "custom/gpu": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "interval": 5,
+    "format": "GPU: {:>2}%",
+    "return-type": "int",
+    "on-click": "alacritty -e nvidia-smi",
+    "tooltip": false
     }
 }
 
