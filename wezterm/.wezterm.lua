@@ -22,6 +22,8 @@ config.font = wezterm.font('JetBrainsMono Nerd Font')
 config.font_size = 15
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
+config.enable_tab_bar = true
+config.window_decorations = "RESIZE"
 
 config.window_padding = {
   bottom = 0,

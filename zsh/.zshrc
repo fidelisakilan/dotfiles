@@ -19,7 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PATH":"$HOME/env-scripts"
 export PATH="$PATH":"$HOME/sdk/google-cloud-sdk/bin"
 export PATH="$PATH":"$HOME/sdk/fvm"
-export CHROME_EXECUTABLE=/usr/bin/chromium
+export PATH="/opt/homebrew/bin:$PATH"
 
 #NVM
 export NVM_DIR="$HOME/.nvm"
@@ -31,12 +31,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
+# DART
+[[ -f /Users/fidelisakilan/.dart-cli-completion/zsh-config.zsh ]] && . /Users/fidelisakilan/.dart-cli-completion/zsh-config.zsh || true
+
 eval "$(starship init zsh)"
 source $HOME/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f /Users/fidelisakilan/.dart-cli-completion/zsh-config.zsh ]] && . /Users/fidelisakilan/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
 
