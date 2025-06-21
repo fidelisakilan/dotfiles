@@ -20,6 +20,7 @@ export PATH="$PATH":"$HOME/env-scripts"
 export PATH="$PATH":"$HOME/sdk/google-cloud-sdk/bin"
 export PATH="$PATH":"$HOME/sdk/fvm"
 export PATH="/opt/homebrew/bin:$PATH"
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 
 #NVM
 export NVM_DIR="$HOME/.nvm"

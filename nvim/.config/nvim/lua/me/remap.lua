@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
--- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = 'Go to netrw' })
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = 'Go to netrw' })
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap

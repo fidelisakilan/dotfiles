@@ -1,9 +1,8 @@
 {
-    "position": "top",
-    "height": 24,
+    "position": "bottom",
+    "height": 30,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["network", "cpu", "custom/gpu", "memory", "pulseaudio"],
+    "modules-right": ["network", "cpu", "custom/gpu", "memory", "pulseaudio", "clock"],
     "clock": {
         "format": "{:%H:%M | %Y-%m-%d}"
     },
