@@ -157,15 +157,15 @@ require('lazy').setup({
     'catppuccin/nvim',
     priority = 1000,
     config = function()
-      -- require('catppuccin').setup({
-      --   flavour = "auto", -- latte, frappe, macchiato, mocha
-      --   background = {    -- :h background
-      --     light = "latte",
-      --     dark = "mocha",
-      --   },
-      --   transparent_background = false,
-      -- })
-      -- vim.cmd.colorscheme 'catppuccin'
+      require('catppuccin').setup({
+        flavour = "auto", -- latte, frappe, macchiato, mocha
+        background = {    -- :h background
+          light = "latte",
+          dark = "mocha",
+        },
+        transparent_background = false,
+      })
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
   {
@@ -196,7 +196,7 @@ require('lazy').setup({
     "navarasu/onedark.nvim",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      -- vim.cmd.colorscheme 'onedark'
     end
   },
   {
@@ -300,21 +300,21 @@ require('lazy').setup({
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   { 'sindrets/diffview.nvim' },
-  -- {
-  --   'stevearc/oil.nvim',
-  --   ---@module 'oil'
-  --   ---@type oil.SetupOpts
-  --   opts = {},
-  --   dependencies = { { "echasnovski/mini.icons", opts = {} } },
-  --   config = function()
-  --     require("oil").setup({
-  --       view_options = {
-  --         -- Show files and directories that start with "."
-  --         show_hidden = true,
-  --       }
-  --     })
-  --   end,
-  -- },
+  {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    config = function()
+      require("oil").setup({
+        view_options = {
+          -- Show files and directories that start with "."
+          show_hidden = true,
+        }
+      })
+    end,
+  },
   {
     "folke/zen-mode.nvim"
   },
