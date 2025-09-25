@@ -15,6 +15,25 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
+    file_ignore_patterns = {
+      ".git/",
+      "node_modules/",
+      ".next/",
+      ".nuxt/",
+      "dist/",
+      "build/",
+    },
+  },
+  pickers = {
+    find_files = {
+      hidden = true,
+    },
+    live_grep = {
+      additional_args = { "--hidden" },
+    },
+    grep_string = {
+      additional_args = { "--hidden" },
+    },
   },
 }
 

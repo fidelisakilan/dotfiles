@@ -25,7 +25,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>dm', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Move highlighted block up and down
@@ -73,5 +73,25 @@ vim.api.nvim_create_user_command('Rfinder',
   {}
 )
 
+vim.api.nvim_set_keymap('n', '<F2>', '<cmd>set wrap!<CR>', { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>of", vim.cmd.Rfinder, { desc = 'Open Finder' })
+-- Tab navigation keymaps
+vim.keymap.set('n', '<leader>tn', ':tabnew<CR>', { desc = 'New tab' })
+vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { desc = 'Close tab' })
+vim.keymap.set('n', '<leader>to', ':tabonly<CR>', { desc = 'Close other tabs' })
+vim.keymap.set('n', '<leader>tl', ':tabnext<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', '<leader>th', ':tabprevious<CR>', { desc = 'Previous tab' })
+vim.keymap.set('n', '<leader>tH', ':tabfirst<CR>', { desc = 'First tab' })
+vim.keymap.set('n', '<leader>tL', ':tablast<CR>', { desc = 'Last tab' })
+
+-- Quick tab switching with Alt+number
+vim.keymap.set('n', '<A-1>', '1gt', { desc = 'Go to tab 1' })
+vim.keymap.set('n', '<A-2>', '2gt', { desc = 'Go to tab 2' })
+vim.keymap.set('n', '<A-3>', '3gt', { desc = 'Go to tab 3' })
+vim.keymap.set('n', '<A-4>', '4gt', { desc = 'Go to tab 4' })
+vim.keymap.set('n', '<A-5>', '5gt', { desc = 'Go to tab 5' })
+vim.keymap.set('n', '<A-6>', '6gt', { desc = 'Go to tab 6' })
+vim.keymap.set('n', '<A-7>', '7gt', { desc = 'Go to tab 7' })
+vim.keymap.set('n', '<A-8>', '8gt', { desc = 'Go to tab 8' })
+vim.keymap.set('n', '<A-9>', '9gt', { desc = 'Go to tab 9' })
+vim.keymap.set('n', '<A-0>', ':tablast<CR>', { desc = 'Go to last tab' })

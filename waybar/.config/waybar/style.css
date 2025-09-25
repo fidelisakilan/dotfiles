@@ -4,12 +4,11 @@
     min-height: 0;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: 500;
-    font-size: 10px;
+    font-size: 13px;   /* Bigger font */
     padding: 0;
 }
 
 window#waybar {
-    /* background: #1e1e2e; */
     background: #000000;
 }
 
@@ -19,57 +18,40 @@ window#waybar {
 #memory,
 #battery,
 #network,
-#pulseaudio {
-    margin: 6px 6px 6px 0px;
-    padding: 2px 8px;
+#pulseaudio,
+#custom-gpu {
+    margin: 4px 2px;
+    padding: 0px 6px;       /* uniform padding for stats */
+    color: #11111b;         /* dark text */
 }
 
-
-
-/* #workspaces { */
-/*     padding: 6px 0px 6px 6px; */
-/* } */
-/* #workspaces button { */
-/*     all: initial; */
-/*     min-width: 0; */
-/*     box-shadow: inset 0 -3px transparent; */
-/*     padding: 0px 6px; */
-/*     color: #6c7086; */
-/* } */
-/**/
-/* #workspaces button.focused { */
-/*     color: #cba6f7; */
-/* } */
-/**/
-/* #workspaces button.urgent { */
-/*     background-color: #e78a4e; */
-/* } */
-
-button {
+/* Workspace buttons */
+#workspaces button {
     border: none;
     border-radius: 0;
     padding: 0px 3px;
+    background: #000000;      /* darkest Catppuccin base */
+    color: #cdd6f4;           /* light text */
 }
 
-button:hover {
-    background: #1e1e2e;
-    color: #89b4fa;
-}
-
-#workspaces button {}
-
-#workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #11111b;
+#workspaces button:hover {
+    background: #313244;      /* slightly lighter dark */
+    color: #cdd6f4;
 }
 
 #workspaces button.active {
     background-color: #89b4fa;
-    color: #11111b;
+    color: #11111b;            /* dark text */
+}
+
+#workspaces button.focused {
+    background-color: #1e1e2e; /* same as inactive */
+    color: #cdd6f4;
 }
 
 #workspaces button.urgent {
-    background-color: #f38ba8;
+    background-color: #f38ba8; /* red for urgent */
+    color: #11111b;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -82,35 +64,30 @@ button:hover {
     margin-right: 0;
 }
 
+/* Stats modules with Catppuccin accents */
 #clock {
-    background-color: #1e1e2e;
-    color: #cdd6f4;
+    background-color: #cdd6f4; /* text color (light) */
 }
 #cpu {
-    background-color: #1e1e2e;
-    color: #f38ba8;
+    background-color: #f38ba8; /* red/pink */
 }
 #memory {
-    background-color: #1e1e2e;
-    color: #cba6f7;
+    background-color: #cba6f7; /* mauve */
 }
 #network {
-    background-color: #1e1e2e;
-    color: #89b4fa;
+    background-color: #89b4fa; /* blue */
 }
 #pulseaudio {
-    background-color: #1e1e2e;
-    color:#f9e2af;
+    background-color: #f9e2af; /* yellow */
 }
 #custom-gpu {
-    background-color: #1e1e2e;
-    color: #a6e3a1;
-    margin: 6px 6px 6px 0px;
-    padding: 2px 8px;
+    background-color: #a6e3a1; /* green */
 }
 
+/* Critical states */
 #cpu.critical,
 #memory.critical {
-    background-color: #ddc7a1;
-    color: #c14a4a;
+    background-color: #c14a4a; /* strong red */
+    color: #11111b;
 }
+

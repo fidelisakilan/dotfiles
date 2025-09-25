@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SESSION_NAME="ghostty"
+SESSION_NAME="0"
 
 # Check if the session already exists
 tmux has-session -t $SESSION_NAME 2>/dev/null

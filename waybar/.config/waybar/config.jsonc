@@ -1,33 +1,32 @@
 {
     "position": "bottom",
-    "height": 30,
+    "height": 26,
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["network", "cpu", "custom/gpu", "memory", "pulseaudio", "clock"],
+    "modules-right": ["cpu", "custom/gpu", "memory", "pulseaudio", "network", "clock"],
     "clock": {
-        "format": "{:%H:%M | %Y-%m-%d}"
+        "format": "{:%m-%d-%Y|%I:%M:%S%p}",
+        "interval": 1
     },
     "cpu": {
-        "format": "CPU: {usage:>2}%"
+        "format": "CPU:{usage:>2}%"
     },
     "memory": {
-        "format": "MEM: {:>2}%"
+        "format": "MEM:{:>2}%"
     },
     "network": {
-        "format-wifi": "NET: {essid} {signalStrength}%",
-        "format-ethernet": "NET: {ipaddr}",
-        "format-disconnected": "NET: Down"
+        "format-wifi": "NET:{essid}{signalStrength}%",
+        "format-ethernet": "NET:{ipaddr}",
+        "format-disconnected": "NET:Down"
     },
     "pulseaudio": {
-        "format": "VOL: {volume:>2}%",
-        "format-muted": "VOL: Muted",
-        "on-click": "pavucontrol"
+        "format": "VOL:{volume:>2}%",
+        "format-muted": "VOL:Mut",
     },
     "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
     "interval": 5,
-    "format": "GPU: {:>2}%",
+    "format": "GPU:{:>2}%",
     "return-type": "int",
-    "on-click": "alacritty -e nvidia-smi",
     "tooltip": false
     }
 }

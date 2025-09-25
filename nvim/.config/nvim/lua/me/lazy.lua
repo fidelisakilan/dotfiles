@@ -163,7 +163,7 @@ require('lazy').setup({
           light = "latte",
           dark = "mocha",
         },
-        transparent_background = false,
+        -- transparent_background = true,
       })
       vim.cmd.colorscheme 'catppuccin'
     end,
@@ -181,7 +181,11 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
-      -- vim.cmd.colorscheme 'tokyonight-night'
+      require("tokyonight").setup({
+        style = "moon",
+        light_style = "day"
+      })
+      -- vim.cmd.colorscheme 'tokyonight'
     end,
   },
   {
@@ -231,13 +235,8 @@ require('lazy').setup({
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      -- Fuzzy Finder Algorithm which requires local dependencies to be built.
-      -- Only load if `make` is available. Make sure you have the system
-      -- requirements installed.
       {
         'nvim-telescope/telescope-fzf-native.nvim',
-        -- NOTE: If you are having trouble with this installation,
-        --       refer to the README for telescope-fzf-native for more instructions.
         build = 'make',
         cond = function()
           return vim.fn.executable 'make' == 1
@@ -272,9 +271,6 @@ require('lazy').setup({
     dependencies = { "nvim-lua/plenary.nvim", "stevearc/dressing.nvim" },
     lazy = false,
   },
-  {
-    "ThePrimeagen/vim-be-good",
-  },
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
@@ -298,8 +294,23 @@ require('lazy').setup({
     end,
   },
   -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  {
+    'folke/todo-comments.nvim',
+    event = 'VimEnter',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    opts = { signs = false },
+  },
   { 'sindrets/diffview.nvim' },
+  { "folke/zen-mode.nvim" },
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-tree/nvim-web-devicons",
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  --   lazy = false,
+  -- }
   {
     'stevearc/oil.nvim',
     ---@module 'oil'
@@ -315,20 +326,4 @@ require('lazy').setup({
       })
     end,
   },
-  {
-    "folke/zen-mode.nvim"
-  },
-  -- {
-  --   "nvim-neo-tree/neo-tree.nvim",
-  --   branch = "v3.x",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-tree/nvim-web-devicons",
-  --     "MunifTanjim/nui.nvim",
-  --     -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
-  --   },
-  --   lazy = false,
-  --   opts = {
-  --   },
-  -- }
 })

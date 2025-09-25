@@ -1,1 +1,22 @@
--- vim.keymap.set('n', '<leader>e', "<cmd>Neotree toggle<CR>", { desc = 'Toggle Neotree' })
+-- require("neo-tree").setup({
+--   close_if_last_window = true, -- auto-close if it's the last window
+--   enable_git_status = true,
+--   filesystem = {
+--     filtered_items = {
+--       visible = true, -- show hidden files by default
+--       hide_dotfiles = false,
+--       hide_gitignored = false,
+--     },
+--     follow_current_file = { enabled = true }, -- auto focus on current file
+--     group_empty_dirs = true,
+--     hijack_netrw_behavior = "open_default",   -- replace netrw
+--   },
+--   buffers = {
+--     follow_current_file = { enabled = true },
+--     group_empty_dirs = true,
+--   },
+-- })
+--
+-- -- Keymaps
+-- vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { desc = "Toggle Neo-tree" })
+-- vim.keymap.set('n', '<leader>o', ':Neotree focus<CR>', { desc = "Focus Neo-tree" })
