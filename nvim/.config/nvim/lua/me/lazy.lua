@@ -158,12 +158,12 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       require('catppuccin').setup({
-        flavour = "auto", -- latte, frappe, macchiato, mocha
+        -- flavour = "auto", -- latte, frappe, macchiato, mocha
         background = {    -- :h background
           light = "latte",
           dark = "mocha",
         },
-        -- transparent_background = true,
+        transparent_background = false,
       })
       vim.cmd.colorscheme 'catppuccin'
     end,
@@ -313,8 +313,6 @@ require('lazy').setup({
   -- }
   {
     'stevearc/oil.nvim',
-    ---@module 'oil'
-    ---@type oil.SetupOpts
     opts = {},
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     config = function()
@@ -325,5 +323,17 @@ require('lazy').setup({
         }
       })
     end,
+  },
+  {
+    "f-person/auto-dark-mode.nvim",
+    opts = {
+      update_interval = 1000,
+      set_dark_mode = function()
+        vim.o.background = "dark"
+      end,
+      set_light_mode = function()
+        vim.o.background = "light"
+      end,
+    },
   },
 })
