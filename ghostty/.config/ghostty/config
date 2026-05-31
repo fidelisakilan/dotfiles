@@ -1,5 +1,5 @@
 theme = dark:Catppuccin Mocha,light:Catppuccin Latte
-font-size = 12
+font-size = 15
 font-family = CaskaydiaCove Nerd Font
 font-feature = -calt
 confirm-close-surface = false
