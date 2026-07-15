@@ -1,80 +1,100 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.2",
   "schemes" : [
     {
+      "buttons" : {
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc53f",
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.6875,
+        "disableAcceleration" : true,
+        "speed" : 0.0689655172413792768
+      },
       "scrolling" : {
         "acceleration" : 1,
         "distance" : {
-          "vertical" : 5,
-          "horizontal" : "56.6px"
+          "horizontal" : "56.6px",
+          "vertical" : 5
         },
-        "reverse" : {
-          "vertical" : true
-        },
-        "speed" : 0,
         "modifiers" : {
           "vertical" : {
-            "option" : {
-              "type" : "preventDefault"
-            },
-            "shift" : {
+            "command" : {
               "type" : "auto"
             },
             "control" : {
               "type" : "preventDefault"
             },
-            "command" : {
+            "option" : {
+              "type" : "preventDefault"
+            },
+            "shift" : {
               "type" : "auto"
             }
           }
-        }
-      },
-      "buttons" : {
-        "universalBackForward" : true
-      },
-      "pointer" : {
-        "disableAcceleration" : true,
-        "acceleration" : 0.6875,
-        "speed" : 0.0689655172413792768
-      },
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : 0
+      }
+    },
+    {
       "if" : {
         "device" : {
-          "productName" : "USB Receiver",
-          "vendorID" : "0x46d",
-          "productID" : "0xc53f",
-          "category" : "mouse"
+          "category" : "mouse",
+          "productID" : "0xb036",
+          "productName" : "Pebble M350s",
+          "serialNumber" : "A23BA1D7",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1,
+        "disableAcceleration" : true,
+        "redirectsToScroll" : false,
+        "speed" : "unset"
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : 4
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "smoothed" : {
+          "vertical" : {
+            "enabled" : false
+          }
+        },
+        "speed" : {
+          "vertical" : 0
         }
       }
     },
     {
       "if" : {
         "device" : {
-          "serialNumber" : "A23BA1D7",
-          "vendorID" : "0x46d",
-          "category" : "mouse",
-          "productID" : "0xb036",
-          "productName" : "Pebble M350s"
-        }
-      },
-      "scrolling" : {
-        "distance" : {
-          "vertical" : "56.1px"
-        },
-        "reverse" : {
-          "vertical" : true
-        },
-        "acceleration" : {
-          "vertical" : 1
-        },
-        "speed" : {
-          "vertical" : 0
+          "category" : "trackpad",
+          "productID" : "0x281",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "serialNumber" : "FM7139504UCN4J6BN+YDB",
+          "vendorID" : "0x5ac"
         }
       },
       "pointer" : {
-        "acceleration" : 1,
-        "speed" : 0.0689655172413792768,
-        "disableAcceleration" : true
+        "disableAcceleration" : false
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+  ]
 }

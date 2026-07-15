@@ -18,6 +18,7 @@ export PATH="$PATH":"$HOME/Library/Android/sdk/platform-tools"
 export PATH="$PATH":"$HOME/env-scripts"
 export PATH="$PATH":"$HOME/sdk/google-cloud-sdk/bin"
 export PATH="$PATH":"$HOME/sdk/fvm"
+export PATH="$HOME/.cargo/bin:$PATH"
 # DART
 [[ -f /Users/fidelisakilan/.dart-cli-completion/zsh-config.zsh ]] && . /Users/fidelisakilan/.dart-cli-completion/zsh-config.zsh || true
 export PATH="/opt/homebrew/bin:$PATH"
