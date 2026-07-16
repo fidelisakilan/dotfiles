@@ -1,4 +1,5 @@
 theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+cursor-color = #dc8a78
 font-size = 15
 font-family = JetBrainsMono Nerd Font
 font-feature = -calt
