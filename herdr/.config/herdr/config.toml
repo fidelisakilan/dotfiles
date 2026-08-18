@@ -1,8 +1,8 @@
 # herdr configuration — keybinds mapped from ~/.tmux.conf
 
 [theme]
-# Inherit the host terminal's colors (was: catppuccin-latte).
-name = "catppuccin-latte"
+# "terminal" is a built-in theme that inherits the host terminal's ANSI palette.
+name = "terminal"
 auto_switch = false
 
 [ui]
