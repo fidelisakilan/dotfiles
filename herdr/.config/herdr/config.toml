@@ -1,0 +1,64 @@
+# herdr configuration — keybinds mapped from ~/.tmux.conf
+
+[theme]
+# Inherit the host terminal's colors (was: catppuccin-latte).
+name = "catppuccin-latte"
+auto_switch = false
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+[ui.toast]
+delivery = "terminal"
+
+[experimental]
+pane_history = false
+
+# ---------------------------------------------------------------------------
+# Keybindings — mirrors ~/.tmux.conf
+# ---------------------------------------------------------------------------
+[keys]
+# tmux: set -g prefix C-Space  (herdr supports a single prefix; C-b secondary dropped)
+prefix = "ctrl+space"
+
+# --- config / session ---
+reload_config = "prefix+q"     # tmux: bind q source-file (reload)
+detach        = "prefix+d"     # tmux default detach (herdr default was prefix+q, freed for reload)
+
+# --- splits ---
+# tmux `split-window -v` = stacked (top/bottom) -> herdr split_horizontal
+# tmux `split-window -h` = side-by-side          -> herdr split_vertical
+split_horizontal = ["prefix+h", "alt+enter"]        # bind h ; M-Enter
+split_vertical   = ["prefix+v", "alt+shift+enter"]  # bind v ; M-S-Enter
+
+# --- pane controls ---
+close_pane = "prefix+x"        # bind x kill-pane
+zoom       = "prefix+z"        # tmux default zoom
+# tmux focus is direct C-M-arrows (no prefix). NOTE: some terminals (Ghostty,
+# Konsole) and Linux DEs eat ctrl+alt+arrows; rebind here or in the terminal if so.
+focus_pane_left  = "ctrl+alt+left"
+focus_pane_right = "ctrl+alt+right"
+focus_pane_up    = "ctrl+alt+up"
+focus_pane_down  = "ctrl+alt+down"
+# herdr resizing is a mode (then arrows/hjkl), not direct chords like your
+# C-M-S-arrows, so those can't be mirrored 1:1. Resize mode parked here:
+resize_mode = "prefix+shift+z"
+
+# --- tabs (tmux "windows") ---
+new_tab      = "prefix+c"                      # bind c new-window
+close_tab    = "prefix+k"                      # bind k kill-window
+rename_tab   = "prefix+r"                      # bind r rename-window
+previous_tab = ["prefix+p", "alt+left"]        # bind p ; M-Left
+next_tab     = ["prefix+n", "alt+right"]       # bind n ; M-Right
+# NOTE: M-S-Left / M-S-Right (swap-window) has no herdr keybind equivalent.
+
+# --- workspaces (tmux "sessions") ---
+new_workspace      = "prefix+shift+c"                # bind C new-session
+close_workspace    = "prefix+shift+k"               # bind K kill-session
+rename_workspace   = "prefix+shift+r"               # bind R rename-session
+previous_workspace = ["prefix+shift+p", "alt+up"]   # bind P ; M-Up
+next_workspace     = ["prefix+shift+n", "alt+down"] # bind N ; M-Down
+
+# M-1..9 select-window directly (prefix+1..9 still works too)
+[keys.indexed]
+tabs = "alt"
