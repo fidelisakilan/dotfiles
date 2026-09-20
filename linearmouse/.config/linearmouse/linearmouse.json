@@ -1,5 +1,5 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.2",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.4",
   "schemes" : [
     {
       "buttons" : {
@@ -16,13 +16,14 @@
       "pointer" : {
         "acceleration" : 0.6875,
         "disableAcceleration" : true,
+        "hardwareDPI" : 1000,
         "speed" : 0.0689655172413792768
       },
       "scrolling" : {
         "acceleration" : 1,
         "distance" : {
           "horizontal" : "56.6px",
-          "vertical" : 5
+          "vertical" : 2
         },
         "modifiers" : {
           "vertical" : {
@@ -94,6 +95,21 @@
       },
       "pointer" : {
         "disableAcceleration" : false
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc548",
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
       }
     }
   ]

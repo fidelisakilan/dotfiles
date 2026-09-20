@@ -1,15 +1,32 @@
+onboarding = false
 # herdr configuration — keybinds mapped from ~/.tmux.conf
 
 [theme]
 # "terminal" is a built-in theme that inherits the host terminal's ANSI palette.
-name = "terminal"
+name = "catppuccin"
 auto_switch = false
 
 [ui]
 show_agent_labels_on_pane_borders = true
+prompt_new_tab_name = false
+
+# tmux-style tight splits: shared dividers, no outer frame, no scrollbar column.
+pane_gaps = false
+pane_outer_borders = false
+pane_scrollbars = false
+
+# Collapse the sidebar (spaces list) to zero width instead of leaving the
+# narrow status rail. Fully hides it on toggle_sidebar.
+sidebar_collapsed_mode = "hidden"
+
+agent_panel_sort = "spaces"
+
+# Agent rows: name line, then the live terminal title the agent sets.
+[ui.sidebar.agents]
+rows = [["state_icon", "workspace", "tab"], ["terminal_title_stripped"]]
 
 [ui.toast]
-delivery = "terminal"
+delivery = "herdr"
 
 [experimental]
 pane_history = false
@@ -18,8 +35,11 @@ pane_history = false
 # Keybindings — mirrors ~/.tmux.conf
 # ---------------------------------------------------------------------------
 [keys]
-# tmux: set -g prefix C-Space  (herdr supports a single prefix; C-b secondary dropped)
-prefix = "ctrl+space"
+# prefix (herdr default). Note: tmux uses C-Space; herdr set to C-b here.
+prefix = "ctrl+b"
+
+# --- ui ---
+toggle_sidebar = "alt+tab"      # option+tab; was prefix+b
 
 # --- config / session ---
 reload_config = "prefix+q"     # tmux: bind q source-file (reload)
@@ -58,6 +78,12 @@ close_workspace    = "prefix+shift+k"               # bind K kill-session
 rename_workspace   = "prefix+shift+r"               # bind R rename-session
 previous_workspace = ["prefix+shift+p", "alt+up"]   # bind P ; M-Up
 next_workspace     = ["prefix+shift+n", "alt+down"] # bind N ; M-Down
+
+# --- worktrees ---
+# You create worktrees with the git CLI; this just opens an existing one as a
+# workspace. new_worktree stays on its default (prefix+shift+g); remove is left
+# unbound on purpose (do destructive removes from the right-click menu).
+open_worktree = "prefix+shift+o"
 
 # M-1..9 select-window directly (prefix+1..9 still works too)
 [keys.indexed]
