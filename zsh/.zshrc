@@ -33,7 +33,7 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(starship init zsh)"
 source $HOME/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 
 declare -A pomo_options

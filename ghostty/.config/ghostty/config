@@ -1,6 +1,6 @@
-theme = dark:Catppuccin Mocha,light:Catppuccin Latte
-cursor-color = #dc8a78
-font-size = 15
+command = /usr/bin/zsh
+font-size = 12
 font-family = JetBrainsMono Nerd Font
 font-feature = -calt
+theme = light:Gruvbox Light,dark:Gruvbox Dark
 confirm-close-surface = false
