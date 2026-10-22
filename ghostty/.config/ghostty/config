@@ -4,3 +4,8 @@ font-family = JetBrainsMono Nerd Font
 font-feature = -calt
 theme = light:Gruvbox Light,dark:Gruvbox Dark
 confirm-close-surface = false
+resize-overlay = never
+
+# keep one warm instance so new windows open instantly
+gtk-single-instance = true
+quit-after-last-window-closed = false
