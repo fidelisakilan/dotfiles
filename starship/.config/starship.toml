@@ -1,0 +1,3 @@
+# Keep the prompt on a single line
+[line_break]
+disabled = true
