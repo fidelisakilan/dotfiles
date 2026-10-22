@@ -28,8 +28,18 @@ export VISUAL="nvim"
 
 ## NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# lazy-load nvm: put default node on PATH now, load nvm itself on first use
+_nvm_default=$(cat "$NVM_DIR/alias/default" 2>/dev/null)
+_nvm_node=( "$NVM_DIR"/versions/node/v${_nvm_default#v}*(N/nOn) )
+[ -z "$_nvm_node" ] && _nvm_node=( "$NVM_DIR"/versions/node/v*(N/nOn) )  # alias like "node"/"lts": use newest
+[ -n "$_nvm_node" ] && export PATH="$_nvm_node[1]/bin:$PATH"
+unset _nvm_default _nvm_node
+nvm() {
+  unset -f nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  nvm "$@"
+}
 
 eval "$(starship init zsh)"
 source $HOME/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
