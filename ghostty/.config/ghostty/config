@@ -5,3 +5,6 @@ font-family = FiraCode Nerd Font
 font-feature = -calt
 confirm-close-surface = false
 mouse-scroll-multiplier = precision:0.5,discrete:0.5
+
+# per-host overrides (stow ghostty-linux on Linux)
+config-file = ?config.linux
