@@ -1,5 +1,5 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.4",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.12.0",
   "schemes" : [
     {
       "buttons" : {
@@ -16,14 +16,14 @@
       "pointer" : {
         "acceleration" : 0.6875,
         "disableAcceleration" : true,
-        "hardwareDPI" : 1000,
+        "hardwareDPI" : 1200,
         "speed" : 0.0689655172413792768
       },
       "scrolling" : {
         "acceleration" : 1,
         "distance" : {
           "horizontal" : "56.6px",
-          "vertical" : 2
+          "vertical" : 5
         },
         "modifiers" : {
           "vertical" : {
@@ -44,7 +44,28 @@
         "reverse" : {
           "vertical" : true
         },
+        "smoothed" : {
+          "vertical" : {
+            "enabled" : false
+          }
+        },
         "speed" : 0
+      }
+    },
+    {
+      "if" : {
+        "app" : "dev.herdr.app",
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc53f",
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : 1
+        }
       }
     },
     {
@@ -110,6 +131,19 @@
         "reverse" : {
           "vertical" : true
         }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x220",
+          "productName" : "Keychron K2 Pro",
+          "vendorID" : "0x3434"
+        }
+      },
+      "scrolling" : {
+        "reverse" : true
       }
     }
   ]

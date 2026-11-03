@@ -1,11 +1,7 @@
-command = /usr/bin/zsh
-font-size = 12
-font-family = JetBrainsMono Nerd Font
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+cursor-color = #dc8a78
+font-size = 19
+font-family = FiraCode Nerd Font
 font-feature = -calt
-theme = light:Gruvbox Light,dark:Gruvbox Dark
 confirm-close-surface = false
-resize-overlay = never
-
-# keep one warm instance so new windows open instantly
-gtk-single-instance = true
-quit-after-last-window-closed = false
+mouse-scroll-multiplier = precision:0.5,discrete:0.5
