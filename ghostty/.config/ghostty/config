@@ -2,9 +2,9 @@ theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 cursor-color = #dc8a78
 font-size = 19
 font-family = FiraCode Nerd Font
-font-feature = -calt
 confirm-close-surface = false
 mouse-scroll-multiplier = precision:0.5,discrete:0.5
-
-# per-host overrides (stow ghostty-linux on Linux)
 config-file = ?config.linux
+keybind = ctrl+enter=unbind
+app-notifications = no-clipboard-copy
+resize-overlay = never
