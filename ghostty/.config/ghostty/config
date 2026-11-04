@@ -1,7 +1,7 @@
 theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 cursor-color = #dc8a78
-font-size = 19
-font-family = FiraCode Nerd Font
+font-size = 14
+font-family = CaskaydiaCove Nerd Font
 confirm-close-surface = false
 mouse-scroll-multiplier = precision:0.5,discrete:0.5
 config-file = ?config.linux
