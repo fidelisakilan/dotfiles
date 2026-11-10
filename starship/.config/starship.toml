@@ -1,3 +1,6 @@
+# Default is 30ms, which a cold read of a large tree can exceed
+scan_timeout = 200
+
 # Put the input on its own line below the prompt info
 [line_break]
 disabled = false
